@@ -7,6 +7,7 @@
   column-gap: 15px;
   align-items: center;
   transform: rotate(-90deg);
+  z-index: 1;
 
   &__text {
     font-weight: 700;

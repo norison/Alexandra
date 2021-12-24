@@ -1,0 +1,23 @@
+.burger {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #151812;
+    margin-top: 6px;
+    margin-left: auto;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:nth-child(2) {
+      width: 36px;
+    }
+  }
+}
