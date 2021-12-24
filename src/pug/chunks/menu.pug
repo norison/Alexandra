@@ -1,4 +1,32 @@
 -
+  const menuLinks = [
+    {
+      descr: "про меня",
+      href: "#about"
+    },
+    {
+      descr: "мой опыт",
+      href: "#exp"
+    },
+    {
+      descr: "мои навыки",
+      href: "#skills"
+    },
+    {
+      descr: "мои работы",
+      href: "#work"
+    },
+    {
+      descr: "прайс-лист",
+      href: "#price"
+    },
+    {
+      descr: "контакты",
+      href: "#contacts"
+    }
+  ]
+
+-
  const socialItems = [
   {name: "github", link: "#", path: "img/social/Github.svg"},
   {name: "instagram", link: "#", path: "img/social/Instagram.svg"},
@@ -10,9 +38,9 @@
     img.menu__close(src="img/Close.svg" alt="close")
     nav.menu__nav 
       ul.menu__list
-        each name in ["про меня", "мой опыт", "мои навыки", "мои работы", "прайс-лист", "контакты"]
+        each item in menuLinks
           li.menu__item 
-            a.menu__link(href="#")= name
+            a.menu__link(href= item.href)= item.descr
     .menu__social 
       each item in socialItems
         a(href= item.link)

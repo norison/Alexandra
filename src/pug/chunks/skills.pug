@@ -1,0 +1,51 @@
+-
+  const skillItems = [
+    {
+      title: "HTML5",
+      path: "img/skills/html5.svg",
+      descr: "Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта"
+    },
+    {
+      title: "CSS3",
+      path: "img/skills/css3.svg",
+      descr: "Этот язык стилей позволяет мне создавать абсолютно любой внешний вид вашего сайта или приложения. Все ограничивается только вашей фантазией!"
+    },
+    {
+      title: "Java Script",
+      path: "img/skills/JS.svg",
+      descr: "Этот язык программирования позволяет оживить все что угодно: слайдеры, окна, подсказки, вкладки, получение данных от сервера и многое другое"
+    },
+    {
+      title: "Jquery",
+      path: "img/skills/Jquery.svg",
+      descr: "Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект мы её не будем, но навык работы с ней присутствует"
+    },
+    {
+      title: "React",
+      path: "img/skills/React.svg",
+      descr: "Эта библиотека позволяет создавать web-приложения. Мы можем создать максимально интерактивный продукт именно под ваши цели"
+    },
+    {
+      title: "Node.js",
+      path: "img/skills/Node.js.svg",
+      descr: "Эта платформа позволяет создавать бэкенд для вашего продукта - “мозги”, которые будут выполнять действия, которые пользователь не видит"
+    },
+     {
+      title: "Mongo.db",
+      path: "img/skills/Mongo.db.svg",
+      descr: "Это нереляционная база данных, которая будет хранить данные вашего сайта или приложения"
+    }
+  ]
+
+section.skills(id="skills") 
+  .container
+    h2.skills__title.title.title_fz16 Навыки
+    .skills__subtitle.title.title_fz36 Что я использую в работе
+    .skills__divider.divider 
+    ul.skills__list 
+      each item in skillItems
+        li.skills__item 
+          .skills__img
+            img(src= item.path, alt= item.title)
+          .skills__name.title.title_fz14= item.title 
+          .skills__descr.descr.descr_fz12= item.descr
