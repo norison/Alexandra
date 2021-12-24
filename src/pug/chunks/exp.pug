@@ -1,0 +1,61 @@
+- const lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo.";
+-
+  const expItemList = [
+    {
+      header: "Образование",
+      items: [
+        {
+          iconAlt: "university",
+          iconPath: "img/exp/University.svg",
+          title: "МГТУ им. Н. Э. Баумана",
+          subtitle: "Диплом магистра | Москва (2014-2020)",
+          descr: lorem
+        },
+        {
+          iconAlt: "courses",
+          iconPath: "img/exp/Courses.svg",
+          title: "Udemy",
+          subtitle: "Курсы по Web-разработке",
+          descr: lorem
+        }
+      ]
+    },
+    {
+      header: "Опыт работы",
+      items: [
+        {
+          iconAlt: "university",
+          iconPath: "img/exp/Developer.svg",
+          title: "Front-End Developer",
+          subtitle: "EPAM | Москва (2018-2019)",
+          descr: lorem
+        },
+        {
+          iconAlt: "designer",
+          iconPath: "img/exp/Designer.svg",
+          title: "UI/UX Designer",
+          subtitle: "Squad Team | Москва (2018)",
+          descr: lorem
+        }
+      ]
+    }
+  ]
+
+section.exp 
+  .container 
+    h2.exp__title.title.title_fz16 Опыт
+    .exp__subtitle.title.title_fz36 Чем я буду полезна
+    .exp__divider.divider 
+    .exp__grid 
+      each item in expItemList
+        .exp__column 
+          h3.exp__column-title.title.title-fz20= item.header
+          ul.exp__list 
+            each element in item.items
+              li.exp__item 
+                .exp__head
+                  .exp__icon
+                    img(src= element.iconPath, alt= element.iconAlt)
+                  .exp__header.title.title_fz14= element.title
+                  .exp__subheader.title.title_fz12= element.subtitle
+                .exp__desc.descr.descr_fz12= element.descr
