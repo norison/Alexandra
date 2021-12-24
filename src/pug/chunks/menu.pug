@@ -1,0 +1,13 @@
+.menu 
+  .menu__block 
+    img.menu__close(src="img/Close.svg" alt="close")
+    nav.menu__nav 
+      ul.menu__list
+        each name in ["про меня", "мой опыт", "мои навыки", "мои работы", "прайс-лист", "контакты"]
+          li.menu__item 
+            a.menu__link(href="#")= name
+    .menu__social 
+      each item in [{name: "github", link: '#', path: "img/social/Github.svg"}, {name: "instagram", link: '#', path: "img/social/Instagram.svg"}, {name: "facebook", link: '#', path: "img/social/Facebook.svg"}]
+        a(href= item.link)
+          img(src= item.path, alt= item.name)
+  .menu__overlay
