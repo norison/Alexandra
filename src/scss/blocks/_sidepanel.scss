@@ -1,0 +1,22 @@
+.sidepanel {
+  position: fixed;
+  top: 338px;
+  left: -110px;
+  display: grid;
+  grid-template-columns: 148px 70px repeat(3, 20px);
+  column-gap: 15px;
+  align-items: center;
+  transform: rotate(-90deg);
+
+  &__text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &__divider {
+    width: 70px;
+    height: 0px;
+    border: 2px solid #000000;
+  }
+}
