@@ -65,7 +65,7 @@
       transition: 0.5s all;
     }
 
-    @media (max-width: $mb0) {
+    @media (min-width: $mb0) {
       &:hover {
         &::before {
           background-color: #fff;
@@ -82,7 +82,7 @@
     text-transform: uppercase;
     text-decoration: none;
 
-    @media (max-width: $mb0) {
+    @media (min-width: $mb0) {
       &:hover {
         color: #ffffff;
         text-decoration: underline;

@@ -39,7 +39,7 @@
     text-decoration: none;
     color: #000000;
 
-    @media (max-width: $mb0) {
+    @media (min-width: $mb0) {
       &:hover {
         color: #000000;
       }
