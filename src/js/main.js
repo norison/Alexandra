@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  ratingRate.forEach((rate, index) => {
-    ratingFilled[index].style.width = rate.textContent;
-  });
+  // ratingRate.forEach((rate, index) => {
+  //   ratingFilled[index].style.width = rate.textContent;
+  // });
 });

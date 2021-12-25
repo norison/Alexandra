@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 2;
   height: 100vh;
-  transition: .5s all;
+  transition: 0.5s all;
   visibility: hidden;
   opacity: 0;
 
@@ -24,6 +24,11 @@
     background-color: $main-color;
     transition: 0.5s all;
     z-index: 1;
+
+    @media (max-width: $mb3) {
+      width: calc(100% - 70px);
+      padding-left: 20px;
+    }
   }
 
   &__close {
@@ -60,9 +65,11 @@
       transition: 0.5s all;
     }
 
-    &:hover {
-      &::before {
-        background-color: #fff;
+    @media (max-width: $mb0) {
+      &:hover {
+        &::before {
+          background-color: #fff;
+        }
       }
     }
   }
@@ -75,9 +82,11 @@
     text-transform: uppercase;
     text-decoration: none;
 
-    &:hover {
-      color: #ffffff;
-      text-decoration: underline;
+    @media (max-width: $mb0) {
+      &:hover {
+        color: #ffffff;
+        text-decoration: underline;
+      }
     }
   }
 

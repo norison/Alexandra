@@ -9,6 +9,10 @@
   transform: rotate(-90deg);
   z-index: 1;
 
+  @media(max-width: $mb0) {
+    display: none;
+  }
+
   &__text {
     font-weight: 700;
     font-size: 16px;

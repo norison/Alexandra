@@ -27,6 +27,23 @@
 .container {
   max-width: 1140px;
   margin: 0 auto;
+
+  @media(max-width: $mb0) {
+    max-width: 960px;
+  }
+
+  @media(max-width: $mb1) {
+    max-width: 720px;
+  }
+
+  @media(max-width: $mb2) {
+    max-width: 540px;
+  }
+
+  @media(max-width: $mb3) {
+    width: 100%;
+    padding: 0 10px;
+  }
 }
 
 .divider {
