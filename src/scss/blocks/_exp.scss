@@ -2,12 +2,24 @@
   margin-top: 120px;
   min-height: 559px;
 
+  @media(max-width: $mb2) {
+    margin-top: 40px;
+  }
+
   &__grid {
     margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(2, 425px);
-    column-gap: 136px;
-    justify-content: center;
+    justify-content: space-between;
+
+    @media(max-width: $mb1) {
+      grid-template-columns: repeat(2, 360px);
+    }
+
+    @media(max-width: $mb2) {
+      grid-template-columns: auto;
+      row-gap: 40px;
+    }
   }
 
   &__column-title {
@@ -71,12 +83,16 @@
 
   &__subheader {
     padding-left: 100px;
+
+    @media(max-width: $mb2) {
+      padding-right: 10px;
+    }
   }
 
   &__icon {
     position: absolute;
     left: 60px;
-    top: 70%;
+    top: 59px;
     @include before-circle;
 
     &::before {
