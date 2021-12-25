@@ -4,6 +4,8 @@ window.addEventListener("DOMContentLoaded", () => {
   const overlay = document.querySelector(".menu__overlay");
   const menu = document.querySelector(".menu");
   const menuLinks = document.querySelectorAll(".menu__link");
+  const ratingRate = document.querySelectorAll(".rating__rate");
+  const ratingFilled = document.querySelectorAll(".rating__filled");
 
   burger.addEventListener("click", () => {
     menu.classList.add("menu_active");
@@ -21,5 +23,9 @@ window.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", () => {
       menu.classList.remove("menu_active");
     });
+  });
+
+  ratingRate.forEach((rate, index) => {
+    ratingFilled[index].style.width = rate.textContent;
   });
 });

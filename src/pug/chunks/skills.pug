@@ -30,11 +30,21 @@
       path: "img/skills/Node.js.svg",
       descr: "Эта платформа позволяет создавать бэкенд для вашего продукта - “мозги”, которые будут выполнять действия, которые пользователь не видит"
     },
-     {
+    {
       title: "Mongo.db",
       path: "img/skills/Mongo.db.svg",
       descr: "Это нереляционная база данных, которая будет хранить данные вашего сайта или приложения"
     }
+  ]
+
+-
+  const ratingList = [
+    { title: "Создание сайтов", rate: 100 },
+    { title: "Создание приложений", rate: 85 },
+    { title: "Работа с данными", rate: 90 },
+    { title: "Креативность", rate: 75 },
+    { title: "Создание дизайна", rate: 90 },
+    { title: "Soft skills", rate: 95 },
   ]
 
 section.skills(id="skills") 
@@ -49,3 +59,11 @@ section.skills(id="skills")
             img(src= item.path, alt= item.title)
           .skills__name.title.title_fz14= item.title 
           .skills__descr.descr.descr_fz12= item.descr
+    .skills__rating.rating 
+      each item in ratingList
+        .rating__wrapper
+          .rating__title.title.title_fz14= item.title 
+          .rating__rate= item.rate + "%"
+          .rating__progress 
+            .rating__empty 
+            .rating__filled
