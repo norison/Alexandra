@@ -1,0 +1,39 @@
+.price {
+  margin-top: 60px;
+  min-height: 283px;
+
+  &__grid {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 370px);
+    justify-content: space-between;
+    row-gap: 15px;
+  }
+
+  &__item {
+    padding-left: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 15px;
+      height: 15px;
+      background-color: $main-color;
+      position: absolute;
+      left: 0px;
+      top: 3px;
+      border-radius: 100%;
+    }
+  }
+
+  &__price {
+    justify-self: end;
+  }
+
+  &__descr {
+    margin-top: 5px;
+    grid-column: 1 / 3;
+  }
+}

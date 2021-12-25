@@ -1,0 +1,20 @@
+-
+  const priceItemList = [
+    {name: "Landing-page", price: "от 8000 руб.", descr: "Одностраничный сайт для презентации услуг/товаров/..."},
+    {name: "Web-приложение", price: "от 28000 руб.", descr: "Приложение внутри браузера для лучшего комфорта"},
+    {name: "Корпоративный сайт", price: "от 20000 руб.", descr: "Сайт для вашего бизнеса или компании"},
+    {name: "Android/IOS Приложение", price: "от 25000 руб.", descr: "Приложение для смартфона любой ОС"},
+    {name: "Интернет-магазин", price: "от 30000 руб.", descr: "Инструмент для ваших продаж в сети"},
+    {name: "Дизайн", price: "Индивидуально", descr: "Создам дизайн для вашего сайта/приложения..."}
+  ]
+
+section.price(id="price")
+  .container
+    h2.price__title.title.title_fz16.title_section Прайс-лист
+    .price__divider.divider 
+    .price__grid 
+      each item in priceItemList
+        .price__item 
+          .price__name.title.title_fz14= item.name 
+          .price__price.title.title_fz14= item.price 
+          .price__descr.descr.descr_fz12= item.descr
