@@ -1,0 +1,43 @@
+-
+  const contactsSocialLinks = [
+    {name: "facebook", href: "#", path: "img/social/Facebook.svg"},
+    {name: "telegram", href: "#", path: "img/social/Telegram.svg"},
+    {name: "instagram", href: "#", path: "img/social/Instagram.svg"},
+  ]
+
+-
+  const contactsForm = [
+    {name: "name", type: "text", label: "Ваше имя", placeholder: "Игорь"},
+    {name: "email", type: "email", label: "Ваша почта", placeholder: ""}
+  ]
+
+section.contacts(id="contacts")
+  .container
+    .contacts__grid
+      .contacts__img
+        img(src="img/Photo.jpg" alt="photo")
+      .contacts__wrapper 
+        h2.contacts__title.title.title_fz16 Контакты
+        .contacts__subtitle.title.title_fz36 Свяжитесь со мной
+        .contacts__divider.divider.divider_left 
+        .contacts__choose.title.title_fz14 Любым удобным для вас способом:
+        .contacts__social 
+          each item in contactsSocialLinks
+            a.contacts__social-link(href= item.href)
+              img.contacts__social-img(src= item.path, alt= item.name) 
+        .contacts__leave.title.title_fz14 Или оставьте ваши данные и я сама вам напишу:
+        form.contacts__form
+          each item in contactsForm
+            .contacts__input
+              label.contacts__label(for= item.name)= item.label
+              input.contacts__input(type= item.type name= item.name placeholder= item.placeholder required)
+          .contacts__textarea
+            label.contacts__label(for="text") Ваше сообщение
+            textarea(name="text") 
+          .contacts__triggers
+            button.contacts__btn.btn(type="submit") Отправить сообщение
+            .contacts__policy 
+              input.contacts__checkbox(type="checkbox" required)
+              span Я согласен(а) с 
+                a.contacts__link(href="./privacy.html") политикой конфиденциальности  
+
