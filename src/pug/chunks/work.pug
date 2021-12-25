@@ -1,0 +1,20 @@
+-
+  const workItemList = [
+    {name: "uber", href: "#", path: "img/work/uber.png"},
+    {name: "pulse", href: "#", path: "img/work/pulse.jpg"},
+    {name: "bread", href: "#", path: "img/work/bread.jpg"},
+    {name: "plans", href: "#", path: "img/work/plans.jpg"},
+    {name: "ipad", href: "#", path: "img/work/ipad.jpg"},
+    {name: "mac", href: "#", path: "img/work/mac.jpg"}
+  ]
+
+section.work(id="work")
+  .container
+    h2.work__title.title.title_fz16.title_section Портфолио
+    .work__subtitle.title.title_fz36.title_subtitle Мои работы
+    .work__divider.divider
+    .work__grid 
+      each item in workItemList
+        .work__item 
+          a.work__link(href= item.href)
+            img(src= item.path, alt= item.name)

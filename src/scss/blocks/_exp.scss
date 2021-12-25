@@ -2,29 +2,6 @@
   margin-top: 120px;
   min-height: 559px;
 
-  &__title {
-    padding-top: 6px;
-    position: relative;
-    text-align: center;
-    @include before-circle;
-
-    &::before {
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
-
-  &__subtitle {
-    margin-top: 6px;
-    text-align: center;
-  }
-
-  &__divider {
-    margin: 0 auto;
-    margin-top: 25px;
-  }
-
   &__grid {
     margin-top: 60px;
     display: grid;

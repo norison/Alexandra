@@ -11,13 +11,6 @@
     align-items: center;
   }
 
-  &__title {
-    padding-top: 2px;
-    padding-left: 13px;
-    position: relative;
-    @include before-circle;
-  }
-
   &__rate {
     justify-self: end;
   }

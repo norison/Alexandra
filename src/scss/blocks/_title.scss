@@ -30,4 +30,21 @@
     font-size: 48px;
     line-height: 60px;
   }
+
+  &_section {
+    padding-top: 6px;
+    text-align: center;
+    position: relative;
+    @include before-circle;
+
+    &::before {
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &_subtitle {
+    text-align: center;
+  }
 }
