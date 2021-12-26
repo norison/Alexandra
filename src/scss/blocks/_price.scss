@@ -2,12 +2,26 @@
   margin-top: 60px;
   min-height: 283px;
 
+  @media(max-width: $mb2) {
+    margin-top: 40px;
+  }
+
   &__grid {
     margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(2, 370px);
     justify-content: space-between;
     row-gap: 15px;
+
+    @media(max-width: $mb1) {
+      grid-template-columns: repeat(2, 300px);
+    }
+
+    @media(max-width: $mb2) {
+      margin-top: 20px;
+      grid-template-columns: 1fr;
+      row-gap: 20px;
+    }
   }
 
   &__item {
