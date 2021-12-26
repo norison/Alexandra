@@ -65,11 +65,9 @@
       transition: 0.5s all;
     }
 
-    @media (min-width: $mb0) {
-      &:hover {
-        &::before {
-          background-color: #fff;
-        }
+    &:hover {
+      &::before {
+        background-color: #fff;
       }
     }
   }
@@ -82,11 +80,9 @@
     text-transform: uppercase;
     text-decoration: none;
 
-    @media (min-width: $mb0) {
-      &:hover {
-        color: #ffffff;
-        text-decoration: underline;
-      }
+    &:hover {
+      color: #ffffff;
+      text-decoration: underline;
     }
   }
 
