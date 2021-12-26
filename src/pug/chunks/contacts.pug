@@ -30,7 +30,7 @@ section.contacts(id="contacts")
           each item in contactsForm
             .contacts__input
               label.contacts__label(for= item.name)= item.label
-              input.contacts__input(type= item.type name= item.name placeholder= item.placeholder required)
+              input(type= item.type name= item.name placeholder= item.placeholder required)
           .contacts__textarea
             label.contacts__label(for="text") Ваше сообщение
             textarea(name="text") 
