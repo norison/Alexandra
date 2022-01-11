@@ -1,2 +1,2 @@
-docker rm alexandra-container -f
-docker rmi alexandra-image
+docker rm alexandra -f
+docker rmi norison/alexandra

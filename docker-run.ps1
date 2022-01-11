@@ -1,0 +1,1 @@
+docker run -d --name alexandra -p 8080:80 norison/alexandra
